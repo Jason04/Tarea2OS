@@ -1,0 +1,22 @@
+mov ah,0x0e
+mov al,'H'
+int 0x10
+mov al,'e'
+int 0x10
+mov al,'l'
+int 0x10
+int 0x10
+mov al,'x'
+int 0x10
+mov al,0x0a
+int 0x10
+xor ah,ah
+xor al,al
+mov ah,3
+mov bh,0
+int 0x10
+mov ah,2
+mov dl,0
+int 0x10
+times 510 - ($ - $$) db 0
+dw 0xAA55
